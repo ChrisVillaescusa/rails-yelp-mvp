@@ -10,10 +10,10 @@
   <% end %>
 
   <!-- [...] all the fields -->
-<div class="container">
+
   <%= f.input :content , label: 'Your content please', error: 'Content is mandatory, please specify one' %>
-  <%= f.input :rating ,placeholder: 'X', input_html: { maxlength: 20 } %>
+  <%= f.input :rating , collection: 0..5,placeholder: 'X', input_html: { maxlength: 20 } %>
   <%= f.submit  :submit  %>
-</div>
+
 
 <% end %>
