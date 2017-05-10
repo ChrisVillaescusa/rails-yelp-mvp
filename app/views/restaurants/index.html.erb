@@ -1,0 +1,27 @@
+<%= link_to "Create", new_restaurant_path %>
+
+<div class="container">
+
+<h1>Restaurants#index</h1>
+<p>Find me in app/views/restaurants/index.html.erb</p>
+
+  <ul>
+      <% @restaurants.each do |restaurant| %>
+      <div class="row">
+        <div class="col-xs-12 col-md-4 ">
+          <div class="card">
+            <h2><strong> <%= restaurant.name %></strong></h2>
+            <li>🔡 <%= restaurant.category %></li>
+            <li>🏠 <%= restaurant.address %></li>
+            <li>📱 <%= restaurant.phone %></li>
+            <%= link_to "Show #{restaurant.name}", restaurant_path(restaurant) %> -
+            <%= link_to 'Destroy', restaurant_path(restaurant),
+                          method: :delete, data: { confirm: 'Are you sure?' } %> -
+                           <%= link_to "Edit ", edit_restaurant_path(restaurant) %>
+          </div>
+        </div>
+      </div>
+      <% end %>
+  </ul>
+
+</div>

@@ -1,0 +1,28 @@
+/* -------------------------------------
+ * CSS code specific to home page
+ * (margin/padding adjustments)
+ * ------------------------------------- */
+body{
+  background-color: #E5DCDC;
+  margin-top: 22px;
+  display: flex;
+}
+
+
+h2 {
+  margin-top: 2px;
+}
+
+.card {
+  -moz-box-shadow: 10px 10px 12px 1px #656565;
+-webkit-box-shadow: 10px 10px 12px 1px #656565;
+-o-box-shadow: 10px 10px 12px 1px #656565;
+box-shadow: 10px 10px 12px 1px #656565;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=12);
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+border-radius: 10px;
+  margin: 20px;
+  padding: 35px;
+  background-color: white;
+}

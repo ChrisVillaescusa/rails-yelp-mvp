@@ -1,0 +1,19 @@
+<%= simple_form_for(@restaurant) do |f| %>
+
+  <% if @restaurant.errors.any? %>
+    <div>
+      <ul>
+      <% @restaurant.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= f.input :name , label: 'Your username please', error: 'Username is mandatory, please specify one' %>
+  <%= f.input :address %>
+  <%= f.input :category , input_html: { maxlength: 20 } %>
+  <%= f.input :phone , placeholder: 'XX XX XX XX XX' , input_html: { maxlength: 20 } %>
+  <%= f.submit  :submit  %>
+
+<% end %>
